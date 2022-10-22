@@ -1,0 +1,27 @@
+{
+  "name": "midterm-preparation",
+  "version": "1.0.0",
+  "description": "Testing my skills",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheTitan-X/midterm-preparation.git"
+  },
+  "author": "Aditya Chouhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheTitan-X/midterm-preparation/issues"
+  },
+  "homepage": "https://github.com/TheTitan-X/midterm-preparation#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.6.7",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
