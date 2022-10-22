@@ -1,15 +1,21 @@
-require("dotenv").config();
+//require("dotenv").config();
 const express = require("express");
 const app = express();
 
 const path = require("path");
 
+// Morgan setup
+const morgan = require("morgan");
+app.use(morgan("dev"));
+
 const indexRouter = require("../app/routes/index");
+const testRouter = require("../app/routes/testModel");
 
 const mongoose = require("mongoose");
 
 // Establishing connection with mongodb
-mongoose.connect(process.env.MONGODB_URI);
+const db = require("./mongodb");
+mongoose.connect(db.URI);
 
 const mongodb = mongoose.connection;
 mongodb.on("error", console.error.bind(console, "Connection error"));
@@ -22,5 +28,6 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "../app", "views"));
 
 app.use("/", indexRouter);
+app.use("/test", testRouter);
 
 module.exports = app;

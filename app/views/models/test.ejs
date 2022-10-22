@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Student ID</th>
+        <th>Grade</th>
+      </tr>
+
+      <% for(let count = 0; count < TestList.length; count++) {%>
+      <tr>
+        <th><%= TestList[count].name %></th>
+        <th><%= TestList[count].id %></th>
+        <th><%= TestList[count].grade %></th>
+      </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
